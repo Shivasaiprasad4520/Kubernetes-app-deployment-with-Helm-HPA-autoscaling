@@ -11,4 +11,5 @@ RUN mkdir -p uploads
 
 EXPOSE 5000
 
+## gunicorn is production-grade server
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--workers", "2", "app:app"]
