@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  ENVIRONMENT: {{ .Values.config.environment | quote }}
+  DEBUG: {{ .Values.config.debug | quote }}

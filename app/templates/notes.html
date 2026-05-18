@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Library</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;">📚 Digital Library</h2>
+
+<div class="notes-wrapper">
+
+{% for n in notes %}
+<div class="note-card">
+
+<h3>{{n[1]}}</h3>
+<p>{{n[2]}}</p>
+
+{% if n[3] %}
+<a href="/uploads/{{n[3]}}" target="_blank">📄 Download File</a>
+{% endif %}
+
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

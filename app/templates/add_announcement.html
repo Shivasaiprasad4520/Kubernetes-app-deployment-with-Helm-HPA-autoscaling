@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Announcement</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2>Add Announcement</h2>
+
+<form method="POST">
+
+<input type="text" name="message" placeholder="Enter announcement" required>
+
+<button type="submit">Add</button>
+ 
+<h2>📢 Announcements</h2>
+
+<div class="announcement-box">
+
+{% for a in announcements %}
+
+<p class="announcement-item">
+👉 {{a[1]}}
+</p>
+
+{% endfor %}
+
+</div>
+
+</form>
+
+</body>
+</html>

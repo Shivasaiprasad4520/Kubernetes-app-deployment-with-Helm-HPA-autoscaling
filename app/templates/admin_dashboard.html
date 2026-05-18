@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h3>Admin Panel</h3>
+
+<a href="/admin-profile">Profile</a>
+<a href="/admin-dashboard">Manage Students</a>
+<a href="/">Logout</a>
+
+</div>
+
+<h2>Admin Dashboard</h2>
+
+<div class="dashboard">
+
+<a href="/dashboard" class="btn">👨‍🎓 Student Records</a>
+<a href="#" class="btn">💰 Fee Details</a>
+<a href="#" class="btn">📄 Certificates</a>
+<a href="/add-announcement" class="btn">📢 Add Notice</a>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+<h2>Student Management</h2>
+</div>
+
+<div class="card">
+
+<form method="POST">
+
+<input type="text" name="search" placeholder="Search student by name">
+
+<button type="submit">Search</button>
+
+</form>
+
+</div>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Course</th>
+<th>Action</th>
+</tr>
+
+{% for s in students %}
+
+<tr>
+<td>{{s[0]}}</td>
+<td>{{s[1]}}</td>
+<td>{{s[2]}}</td>
+
+<td>
+<a href="/delete/{{s[1]}}">Delete</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

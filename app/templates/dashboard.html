@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h3>Student Panel</h3>
+
+<a href="/dashboard">Dashboard</a>
+<a href="/">Logout</a>
+
+</div>
+
+<div class="content">
+
+<div class="card">
+<h2>Total Students: {{total}}</h2>
+</div>
+
+<div class="card">
+<h3>Student List</h3>
+</div>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Course</th>
+</tr>
+
+{% for s in students %}
+
+<tr>
+<td>{{s[0]}}</td>
+<td>{{s[1]}}</td>
+<td>{{s[2]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

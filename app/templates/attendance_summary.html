@@ -1,0 +1,16 @@
+<h2 class="summary-title">📊 Attendance Summary</h2>
+
+<div class="summary-container">
+
+{% for d in data %}
+<div class="summary-card">
+
+<h3>{{d[0]}} - {{d[1]}} Year</h3>
+
+<p class="present">✅ Present: {{d[2]}}</p>
+<p class="absent">❌ Absent: {{d[3]}}</p>
+
+</div>
+{% endfor %}
+
+</div>

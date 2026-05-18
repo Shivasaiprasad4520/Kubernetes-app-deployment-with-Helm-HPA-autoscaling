@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2 class="dashboard-title">Welcome Student</h2>
+
+<!-- ✅ OPTIONS AS BUTTONS -->
+<div class="dashboard-options">
+
+
+<a href="/view-attendance" class="btn">📊 Attendance</a>
+<a href="/notes" class="btn">📚 Digital Library</a>
+<a href="/submit-notes" class="btn">📤 Submit Notes</a>
+
+</div>
+
+<!-- ✅ NOTICE BOARD -->
+<h3 class="notice-title">📢 Notice Board</h3>
+
+<div class="notice-box">
+
+{% for a in announcements %}
+<p class="notice-item">👉 {{a[1]}}</p>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

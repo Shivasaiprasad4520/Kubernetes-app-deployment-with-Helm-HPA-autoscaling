@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Review Notes</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;">📝 Student Submissions</h2>
+
+<div class="notes-wrapper">
+
+{% for d in data %}
+<div class="note-card">
+
+<h3>{{d[1]}}</h3>
+<p>{{d[2]}}</p>
+
+<p><b>Name:</b> {{d[4]}}</p>
+<p><b>Roll No:</b> {{d[8]}}</p>
+<p><b>Branch:</b> {{d[6]}}</p>
+<p><b>Year:</b> {{d[7]}}</p>
+<p><b>Email:</b> {{d[5]}}</p>
+
+{% if d[3] %}
+<a href="/uploads/{{d[3]}}" target="_blank">📄 View File</a>
+{% endif %}
+
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

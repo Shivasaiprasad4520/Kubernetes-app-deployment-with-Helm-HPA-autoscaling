@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mark Attendance</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;">📊 Mark Attendance</h2>
+
+<div class="top-btn">
+    <a href="/attendance-summary" class="btn">📊 Attendance Summary</a>
+</div>
+
+<form method="POST">
+
+<div class="notes-wrapper">
+
+{% for s in students %}
+<div class="note-card">
+
+<p><b>{{s[0]}}</b> ({{s[1]}})</p>
+
+<select name="{{s[1]}}">
+<option value="Present">Present</option>
+<option value="Absent">Absent</option>
+</select>
+
+</div>
+{% endfor %}
+
+</div>
+
+<div style="text-align:center;">
+<button type="submit" class="btn">Submit</button>
+</div>
+
+</form>
+
+</body>
+</html>

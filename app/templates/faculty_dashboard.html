@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Faculty Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h3>Faculty Panel</h3>
+
+<a href="/faculty-profile">Profile</a>
+<a href="/faculty-dashboard">Students</a>
+<a href="/">Logout</a>
+
+</div>
+<h2>Faculty Dashboard</h2>
+
+
+
+<div class="dashboard-options">
+
+<a href="/mark-attendance" class="btn">📊 Mark Attendance</a>
+<a href="/upload-notes" class="btn">📚 Upload Notes</a>
+<a href="/review-notes" class="btn">📝 Review Notes</a>
+
+</div>
+
+
+<div class="content">
+
+<div class="card">
+<h2>Registered Students</h2>
+</div>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Course</th>
+</tr>
+
+{% for s in students %}
+
+<tr>
+<td>{{s[0]}}</td>
+<td>{{s[1]}}</td>
+<td>{{s[2]}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div> 
+
+</body>
+</html>
